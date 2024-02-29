@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace com.karabaev.common.Animations
+namespace com.karabaev.utilities.unity.Animations
 {
   public class AnimatorStateMachineBehaviour : StateMachineBehaviour
   {

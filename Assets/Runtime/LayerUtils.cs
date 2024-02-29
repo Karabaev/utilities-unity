@@ -1,4 +1,4 @@
-﻿namespace com.karabaev.common.Utils
+﻿namespace com.karabaev.utilities.unity
 {
   public static class LayerUtils
   {

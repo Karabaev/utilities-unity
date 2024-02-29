@@ -4,7 +4,7 @@ using System.Globalization;
 using JetBrains.Annotations;
 using UnityEngine;
 
-namespace com.karabaev.common
+namespace com.karabaev.utilities.unity
 {
     [SuppressMessage("ReSharper", "CompareOfFloatsByEqualityOperator")]
     [PublicAPI]

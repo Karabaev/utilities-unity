@@ -3,19 +3,20 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using UnityEngine;
 
-namespace com.karabaev.common.Utils
+namespace com.karabaev.utilities.unity
 {
   [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
   public static class RandomUtils
   {
     private const string PossibleChars = "abcdefghijklmnopqrstuvwxyz0123456789";
 
-    public static string RandomString(int num = 10) {
+    public static string RandomString(int num = 10)
+    {
       var result = new char[num];
-      while(num-- > 0) {
+      
+      while(num-- > 0)
         result[num] = PossibleChars[UnityEngine.Random.Range(0, PossibleChars.Length)];
-      }
-    
+
       return new string(result);
     }
     

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using com.karabaev.common.Utils;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;
 
-namespace com.karabaev.common.Animations
+namespace com.karabaev.utilities.unity.Animations
 {
   [PublicAPI]
   public class AnimationEventsComponent : MonoBehaviour
@@ -288,7 +287,7 @@ namespace com.karabaev.common.Animations
     {
       foreach(var state in stateMachine.stateMachine.states)
       {
-        if(state.state.behaviours.Contains(b => b.GetType() == typeof(AnimatorStateMachineBehaviour)))
+        if(state.state.behaviours.Any(b => b.GetType() == typeof(AnimatorStateMachineBehaviour)))
           continue;
 
         state.state.AddStateMachineBehaviour<AnimatorStateMachineBehaviour>();
@@ -300,7 +299,7 @@ namespace com.karabaev.common.Animations
 
     private void AddBehaviourToState(UnityEditor.Animations.AnimatorState state)
     {
-      if(state.behaviours.Contains(b => b.GetType() == typeof(AnimatorStateMachineBehaviour)))
+      if(state.behaviours.Any(b => b.GetType() == typeof(AnimatorStateMachineBehaviour)))
         return;
 
       state.AddStateMachineBehaviour<AnimatorStateMachineBehaviour>();
