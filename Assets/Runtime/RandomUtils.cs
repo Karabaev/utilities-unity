@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -22,9 +23,10 @@ namespace com.karabaev.utilities.unity
     
     public static bool Random(float probability)
     {
-      probability /= 100;
-      var picked = UnityEngine.Random.value;
-      return picked <= probability;
+      if(probability is < 0.0f or > 1.0f)
+        throw new ArgumentOutOfRangeException(nameof(probability), "Probability must be between 0 and 1");
+      
+      return UnityEngine.Random.value <= probability;
     }
 
     public static int PickRandomByWeights(IEnumerable<int> weights)
