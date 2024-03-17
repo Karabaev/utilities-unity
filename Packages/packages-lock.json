@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "64792b672d35e43b3412fc74861f8bdbf41e3a6f"
     },
+    "com.karabaev.utilities": {
+      "version": "https://git.jetbrains.space/rdds2/gk/com.karabaev.utilities.git?path=Assets",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "890c130c4f7eaff10700531de245aaa98d2f8ebc"
+    },
     "com.unity.ext.nunit": {
       "version": "2.0.3",
       "depth": 1,

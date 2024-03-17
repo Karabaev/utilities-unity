@@ -2,7 +2,8 @@
     "name": "com.karabaev.utilities.unity",
     "rootNamespace": "com.karabaev.utilities.unity",
     "references": [
-        "UniTask"
+        "UniTask",
+        "com.karabaev.utilities"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
