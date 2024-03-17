@@ -8,13 +8,13 @@ namespace com.karabaev.utilities.unity
 {
   public static class ComponentUtils
   {
-    public static T? GetComponentInChildrenOnly<T>(this Component component) where T : Component =>
+    public static T? GetComponentInChildrenOnly<T>(this Component component) where T : class =>
       component.gameObject.GetComponentInChildrenOnly<T>();
 
-    public static T RequireComponentInChildrenOnly<T>(this Component component) where T : Component =>
+    public static T RequireComponentInChildrenOnly<T>(this Component component) where T : class =>
       component.gameObject.RequireComponentInChildrenOnly<T>();
 
-    public static T RequireComponentInChild<T>(this Component component, string childName) where T : Component =>
+    public static T RequireComponentInChild<T>(this Component component, string childName) where T : class =>
       GetComponentInChild<T>(component, childName) ??
       throw new NullReferenceException($"Component {typeof(T).Name} not found on child {childName} of object {component.name}");
 
@@ -22,8 +22,8 @@ namespace com.karabaev.utilities.unity
       GetComponentInChild(component, childName, componentType) ??
       throw new NullReferenceException($"Specified component was not found in child. Object={component.gameObject.name}, Child={childName}, ComponentType={componentType.Name}");
     
-    public static T? GetComponentInChild<T>(this Component component, string childName) where T : Component =>
-      (T?)component.GetComponentInChild(childName, typeof(T));
+    public static T? GetComponentInChild<T>(this Component component, string childName) where T : class =>
+      component.GetComponentInChild(childName, typeof(T)) as T;
 
     public static Component? GetComponentInChild(this Component component, string childName, Type componentType)
     {
@@ -40,7 +40,7 @@ namespace com.karabaev.utilities.unity
       return null;
     }
 
-    public static T? GetComponentInSiblings<T>(this Component component) where T : Component
+    public static T? GetComponentInSiblings<T>(this Component component) where T : class
     {
       if(component.transform.parent.AsNullable() == null)
         return null;
@@ -59,13 +59,13 @@ namespace com.karabaev.utilities.unity
       return null;
     }
 
-    public static T RequireComponentInSiblings<T>(this Component component) where T : Component =>
+    public static T RequireComponentInSiblings<T>(this Component component) where T : class =>
       GetComponentInSiblings<T>(component) ?? throw new NullReferenceException($"Component {typeof(T).Name} not found in siblings of object {component.name}");
 
     public static T RequireComponent<T>(this Component component) where T : class => component.gameObject.RequireComponent<T>();
 
-    public static T RequireComponentInChildren<T>(this Component component, bool includeInactive = true) where T : Component =>
-      (T)RequireComponentInChildren(component, typeof(T), includeInactive);
+    public static T RequireComponentInChildren<T>(this Component component, bool includeInactive = true) where T : class =>
+      RequireComponentInChildren(component, typeof(T), includeInactive) as T ?? throw new NullReferenceException();
 
     public static Component RequireComponentInChildren(this Component component, Type componentType, bool includeInactive = true)
     {

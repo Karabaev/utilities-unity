@@ -8,19 +8,19 @@ namespace com.karabaev.utilities.unity
 {
   public static class GameObjectUtils
   {
-    public static T? GetComponentInChildrenOnly<T>(this GameObject gameObject) where T : Component
+    public static T? GetComponentInChildrenOnly<T>(this GameObject gameObject) where T : class
     {
       foreach(Transform child in gameObject.transform)
       {
         var found = child.GetComponent<T>();
-        return found ? found : GetComponentInChildrenOnly<T>(child.gameObject);
+        return found ?? GetComponentInChildrenOnly<T>(child.gameObject);
       }
 
       return null;
     }
 
-    public static T RequireComponentInChildrenOnly<T>(this GameObject gameObject) where T : Component =>
-      (T)RequireComponentInChildrenOnly(gameObject, typeof(T));
+    public static T RequireComponentInChildrenOnly<T>(this GameObject gameObject) where T : class =>
+      RequireComponentInChildrenOnly(gameObject, typeof(T)) as T ?? throw new NullReferenceException();
 
     public static Component RequireComponentInChildrenOnly(this GameObject gameObject, Type componentType)
     {
