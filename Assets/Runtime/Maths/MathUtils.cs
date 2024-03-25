@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace com.karabaev.utilities.unity
+namespace com.karabaev.utilities.unity.Maths
 {
 public static class MathUtils
   {
