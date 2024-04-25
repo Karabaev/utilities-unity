@@ -123,5 +123,14 @@ namespace com.karabaev.utilities.unity
       var radius = UnityEngine.Random.Range(minRadius, maxRadius);
       return spawnDirection * radius;
     }
+    
+    public static void Shuffle<T>(this IList<T> collection, ref Unity.Mathematics.Random random)
+    {
+      for(var i = collection.Count - 1; i > 0; i--)
+      {
+        var randomColumn = random.NextInt(collection.Count);
+        (collection[i], collection[randomColumn]) = (collection[randomColumn], collection[i]);
+      }
+    }
   }
 }
