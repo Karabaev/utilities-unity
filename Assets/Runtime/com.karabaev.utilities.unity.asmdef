@@ -3,7 +3,8 @@
     "rootNamespace": "com.karabaev.utilities.unity",
     "references": [
         "UniTask",
-        "com.karabaev.utilities"
+        "com.karabaev.utilities",
+        "Unity.Mathematics"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
