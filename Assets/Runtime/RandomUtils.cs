@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using UnityEngine;
+using Random = Unity.Mathematics.Random;
 
 namespace com.karabaev.utilities.unity
 {
@@ -124,7 +125,7 @@ namespace com.karabaev.utilities.unity
       return spawnDirection * radius;
     }
     
-    public static void Shuffle<T>(this IList<T> collection, ref Unity.Mathematics.Random random)
+    public static void Shuffle<T>(this IList<T> collection, ref Random random)
     {
       for(var i = collection.Count - 1; i > 0; i--)
       {
@@ -132,5 +133,7 @@ namespace com.karabaev.utilities.unity
         (collection[i], collection[randomColumn]) = (collection[randomColumn], collection[i]);
       }
     }
+
+    public static Random Create() => new((uint)Guid.NewGuid().GetHashCode());
   }
 }
