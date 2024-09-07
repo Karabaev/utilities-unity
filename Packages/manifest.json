@@ -1,11 +1,12 @@
 {
   "dependencies": {
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.5.3",
-    "com.karabaev.utilities": "https://git.jetbrains.space/rdds2/gk/com.karabaev.utilities.git?path=Assets",
+    "com.karabaev.utilities": "https://github.com/Karabaev/utilities.git?path=Assets",
     "com.unity.ide.rider": "3.0.26",
     "com.unity.mathematics": "1.2.6",
     "com.unity.test-framework": "1.4.3",
     "com.unity.testtools.codecoverage": "1.2.5",
+    "com.unity.toolchain.win-x86_64-linux-x86_64": "2.0.9",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

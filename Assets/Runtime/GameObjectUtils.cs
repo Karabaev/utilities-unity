@@ -8,41 +8,6 @@ namespace com.karabaev.utilities.unity
 {
   public static class GameObjectUtils
   {
-    public static T? GetComponentInChildrenOnly<T>(this GameObject gameObject) where T : class
-    {
-      foreach(Transform child in gameObject.transform)
-      {
-        var found = child.GetComponent<T>();
-        return found ?? GetComponentInChildrenOnly<T>(child.gameObject);
-      }
-
-      return null;
-    }
-
-    public static T RequireComponentInChildrenOnly<T>(this GameObject gameObject) where T : class =>
-      RequireComponentInChildrenOnly(gameObject, typeof(T)) as T ?? throw new NullReferenceException();
-
-    public static Component RequireComponentInChildrenOnly(this GameObject gameObject, Type componentType)
-    {
-      foreach(Transform child in gameObject.transform)
-      {
-        var found = child.GetComponentInChildren(componentType);
-
-        if(found)
-          return found!;
-      }
-
-      throw new NullReferenceException($"Specified component was not found in children. ComponentType={componentType.Name}, Object={gameObject.name}");
-    }
-
-    public static Component RequireComponent(this GameObject gameObject, Type componentType)
-    {
-      return gameObject.GetComponent(componentType) 
-     ?? throw new NullReferenceException($"Specified component was not found on object. ComponentType={componentType.Name}, Object={gameObject.name}");
-    }
-
-    public static T RequireComponent<T>(this GameObject gameObject) where T : class => (RequireComponent(gameObject, typeof(T)) as T)!;
-
     public static void DestroyObject(this GameObject gameObject) => Object.Destroy(gameObject);
 
     public static UniTask DestroyObjectAsync(this GameObject gameObject)

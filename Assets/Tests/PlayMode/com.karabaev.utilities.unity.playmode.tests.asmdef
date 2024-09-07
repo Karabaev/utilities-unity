@@ -1,15 +1,15 @@
 {
-    "name": "com.karabaev.utilities.unity.editor.tests",
-    "rootNamespace": "com.karabaev.utilities.unity.editor.tests",
+    "name": "com.karabaev.utilities.unity.playmode.tests",
+    "rootNamespace": "com.karabaev.utilities.unity.playmode.tests",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "com.karabaev.utilities.unity",
-        "com.karabaev.test-utilities.unity",
-        "com.karabaev.utilities.unity.playmode.tests"
+        "com.karabaev.test-utilities.unity"
     ],
     "includePlatforms": [
-        "Editor"
+        "Editor",
+        "QNX"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

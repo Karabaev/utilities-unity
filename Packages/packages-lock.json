@@ -8,11 +8,11 @@
       "hash": "64792b672d35e43b3412fc74861f8bdbf41e3a6f"
     },
     "com.karabaev.utilities": {
-      "version": "https://git.jetbrains.space/rdds2/gk/com.karabaev.utilities.git?path=Assets",
+      "version": "https://github.com/Karabaev/utilities.git?path=Assets",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "890c130c4f7eaff10700531de245aaa98d2f8ebc"
+      "hash": "ec9c62b522e7b32fe7e466fe91a153f42391cafa"
     },
     "com.unity.ext.nunit": {
       "version": "2.0.3",
@@ -44,6 +44,22 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.sysroot": {
+      "version": "2.0.10",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.sysroot.linux-x86_64": {
+      "version": "2.0.9",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "2.0.10"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
       "version": "1.4.3",
       "depth": 0,
@@ -62,6 +78,16 @@
       "dependencies": {
         "com.unity.test-framework": "1.0.16",
         "com.unity.settings-manager": "1.0.1"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.toolchain.win-x86_64-linux-x86_64": {
+      "version": "2.0.9",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "2.0.10",
+        "com.unity.sysroot.linux-x86_64": "2.0.9"
       },
       "url": "https://packages.unity.com"
     },
