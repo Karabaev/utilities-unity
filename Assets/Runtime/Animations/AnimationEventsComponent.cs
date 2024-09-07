@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using com.karabaev.utilities.unity.GameKit;
+using com.karabaev.utilities.unity.GameKit.Utils;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -210,7 +212,7 @@ namespace com.karabaev.utilities.unity.Animations
 
     private void OnValidate()
     {
-      _animator = this.RequireComponentInChildren<Animator>();
+      _animator = this.RequireComponentFromChildren<Animator>();
 #if UNITY_EDITOR
       UnityEditor.Animations.AnimatorController controller;
 

@@ -1,0 +1,19 @@
+{
+    "name": "com.karabaev.test-utilities.unity",
+    "rootNamespace": "com.karabaev.test-utilities.unity",
+    "references": [
+        "com.karabaev.utilities",
+        "com.karabaev.utilities.unity"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
