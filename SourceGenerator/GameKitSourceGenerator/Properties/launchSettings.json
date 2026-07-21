@@ -1,0 +1,11 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "GameKitSourceGenerator": {
+      "commandName": "DebugRoslynComponent",
+      "environmentVariables": {
+        "targetProject": "../GameKitSourceGenerator.Examples/GameKitSourceGenerator.Examples.csproj"
+      }
+    }
+  }
+}
