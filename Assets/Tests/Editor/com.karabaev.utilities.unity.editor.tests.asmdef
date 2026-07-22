@@ -5,7 +5,7 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "com.karabaev.utilities.unity",
-        "com.karabaev.test-utilities.unity",
+        "com.karabaev.unitest",
         "com.karabaev.utilities.unity.playmode.tests"
     ],
     "includePlatforms": [
