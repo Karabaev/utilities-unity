@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using com.karabaev.utilities.unity.GameKit;
-using com.karabaev.utilities.unity.GameKit.Utils;
+using com.karabaev.utilities.unity.Utils;
 using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;

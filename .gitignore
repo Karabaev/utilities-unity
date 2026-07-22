@@ -70,3 +70,6 @@ Assets/Plugins/Editor/JetBrains*
 
 _ReSharper.Caches/
 /ProjectSettings/AndroidLogcatSettings.asset
+
+# Rider build output
+/.out/

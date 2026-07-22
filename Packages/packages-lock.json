@@ -1,11 +1,18 @@
 {
   "dependencies": {
     "com.cysharp.unitask": {
-      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.5.3",
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "64792b672d35e43b3412fc74861f8bdbf41e3a6f"
+      "hash": "ceac8d6946b1125fe782cd171fbcb245b567dbf9"
+    },
+    "com.karabaev.unitest": {
+      "version": "https://github.com/Karabaev/unitest.git?path=src/UniTest/Assets",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "306659326861f327bced28f9526c349dad4ea0f0"
     },
     "com.karabaev.utilities": {
       "version": "https://github.com/Karabaev/utilities.git?path=Assets",

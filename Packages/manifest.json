@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.5.3",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.karabaev.utilities": "https://github.com/Karabaev/utilities.git?path=Assets",
+    "com.karabaev.unitest": "https://github.com/Karabaev/unitest.git?path=src/UniTest/Assets",
     "com.unity.ide.rider": "3.0.38",
     "com.unity.mathematics": "1.4.0",
     "com.unity.multiplayer.center": "1.0.1",
@@ -41,5 +42,8 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "testables": [
+    "com.karabaev.unitest"
+  ]
 }
